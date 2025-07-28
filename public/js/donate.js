@@ -49,7 +49,7 @@ function sendToGoogleSheets(data) {
 // PAYSTACK
 function payWithPaystack() {
   PaystackPop.setup({
-    key: 'pk_test_xxxxxxxxxxxxxxxxxxxxxx',
+    key: 'pk_test_441f71fd57036446523d08ec135968b876910356',
     email: formData.email,
     amount: formData.amount * 100,
     currency: formData.currency,
