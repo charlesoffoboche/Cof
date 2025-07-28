@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap & FontAwesome -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/contact.css" />
+  
+
+  
+</head>
+
+<body>
+<!-- Floating Action Buttons -->
+<div class="floating-buttons">
+  <a href="donate.html" class="fab donate-btn" title="Donate">
+    <i class="fas fa-hand-holding-heart"></i> Donate
+  </a>
+  <a href="volunteer.html" class="fab volunteer-btn" title="Volunteer">
+    <i class="fas fa-hands-helping"></i> Volunteer
+  </a>
+</div>
+
+
+
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg shadow sticky-top navbar-custom">
+
+  <div class="container py-2">
+    <!-- Logo and Brand -->
+    <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold" href="home.html" style="font-family: 'Poppins', sans-serif; font-size: 1.6rem;">
+      <img src="images/logo.png" alt="Logo" width="40" height="40" style="border-radius: 50%;">
+      Charles Offoboche Foundation
+    </a>
+
+    <!-- Toggler for mobile -->
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav me-2">
+        <li class="nav-item">
+          <a class="nav-link nav-hover text-white fw-semibold px-3" href="home.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-hover text-white fw-semibold px-3" href="about.html">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-hover text-white fw-semibold px-3" href="gallery.html">Gallery</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-hover text-white fw-semibold px-3" href="contact.html">Contact</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white fw-semibold px-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+            Explore
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="events.html">Events</a></li>
+            <li><a class="dropdown-item" href="news.html">News</a></li>
+            <li><a class="dropdown-item" href="team.html">Team</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <section class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Contact Us</h2>
+
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <div class="contact-card">
+            <h5 class="mb-3">Get in Touch</h5>
+                <form id="contactForm">
+                <div class="mb-3">
+                  <label class="form-label">Full Name</label>
+                  <input type="text" name="name" class="form-control" placeholder="Your Name" required />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Email Address</label>
+                  <input type="email" name="email" class="form-control" placeholder="yourname@example.com" required />
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">Message</label>
+                  <textarea name="message" class="form-control" rows="4" placeholder="Write your message here..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-gold">Send Message</button>
+              </form>
+
+          </div>
+
+          <div class="newsletter mt-5">
+            <h6 class="mb-3">Subscribe to Our Newsletter</h6>
+            <form class="d-flex">
+              <input type="email" class="form-control" placeholder="Enter your email" required>
+              <button type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="contact-card">
+            <h5 class="mb-3">Our Office</h5>
+            <p><i class="fas fa-map-marker-alt me-2 text-danger"></i>123 Foundation Street, Central District, Abuja, Nigeria</p>
+            <p><i class="fas fa-envelope me-2 text-danger"></i>info@yourfoundation.org</p>
+            <p><i class="fas fa-phone me-2 text-danger"></i>+234 812 345 6789</p>
+
+            <div class="map-container mt-4">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.857338229656!2d7.489825174844073!3d9.057918090048338!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0b3e30b7bfa1%3A0x840e59f3f6ebd5d6!2sAbuja!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng"
+                width="100%"
+                height="100%"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background: #0d0d0d; color: #f0f0f0; padding: 70px 0 40px; font-family: 'Segoe UI', sans-serif;">
+  <div class="container">
+    <div class="row text-center text-md-start align-items-start">
+
+      <!-- Logo and Description -->
+      <div class="col-md-4 mb-5 mb-md-0">
+        <img src="images/logo.png" alt="Foundation Logo" style="height: 65px; margin-bottom: 20px;">
+        <p style="line-height: 1.8; font-size: 15px; color: #cccccc;">
+          Charles Offoboche Foundation is dedicated to transforming lives through education, empowerment, and sustainable community development initiatives across Africa.
+        </p>
+      </div>
+
+      <!-- Quick Navigation -->
+      <div class="col-md-4 mb-5 mb-md-0">
+        <h5 class="mb-4 fw-semibold text-uppercase" style="color: #e0b000;">Quick Links</h5>
+        <ul class="list-unstyled" style="line-height: 2;">
+          <li><a href="index.html" class="footer-link" style="color: #ccc; text-decoration: none; transition: 0.3s;">Home</a></li>
+          <li><a href="about.html" class="footer-link" style="color: #ccc; text-decoration: none; transition: 0.3s;">About</a></li>
+          <li><a href="gallery.html" class="footer-link" style="color: #ccc; text-decoration: none; transition: 0.3s;">Gallery</a></li>
+          <li><a href="contact.html" class="footer-link" style="color: #ccc; text-decoration: none; transition: 0.3s;">Contact</a></li>
+          <li><a href="programs.html" class="footer-link" style="color: #ccc; text-decoration: none; transition: 0.3s;">Programs</a></li>
+          <li><a href="news.html" class="footer-link" style="color: #ccc; text-decoration: none; transition: 0.3s;">News</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media and Contact -->
+      <div class="col-md-4">
+        <h5 class="mb-4 fw-semibold text-uppercase" style="color: #e0b000;">Connect with Us</h5>
+        <div class="d-flex justify-content-center justify-content-md-start gap-3 mb-3">
+          <a href="#" class="social-icon" style="color: #f0f0f0; font-size: 18px; transition: 0.3s;"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" class="social-icon" style="color: #f0f0f0; font-size: 18px; transition: 0.3s;"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="social-icon" style="color: #f0f0f0; font-size: 18px; transition: 0.3s;"><i class="fab fa-instagram"></i></a>
+          <a href="#" class="social-icon" style="color: #f0f0f0; font-size: 18px; transition: 0.3s;"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div style="font-size: 14px; color: #bbbbbb;">
+          <p><i class="fas fa-envelope me-2"></i> info@cofoundation.org</p>
+          <p><i class="fas fa-envelope me-2"></i> charlesoffobochefoundation@gmail.com</p>
+          <p><i class="fas fa-phone me-2"></i> +234 8176622791</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="mt-5 border-secondary">
+
+    <!-- Copyright -->
+    <div class="text-center pt-3" style="font-size: 13.5px; color: #999;">
+      <p class="mb-1">&copy; 2025 <strong>Charles Offoboche Foundation</strong>. All Rights Reserved.</p>
+      <p>Powered by <a href="https://hemitintellicore.com" class="fw-bold text-warning text-decoration-none">Hemit Intellicore Ltd</a></p>
+    </div>
+  </div>
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

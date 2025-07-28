@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Donate</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            deepTeal: '#004d40'
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <script src="https://checkout.flutterwave.com/v3.js"></script>
+</head>
+<body class="bg-black text-white font-sans min-h-screen">
+
+
+<!-- Header -->
+  <header class="bg-[#004d40] text-white p-6 shadow-md">
+    <div class="max-w-6xl mx-auto flex justify-between items-center">
+      <h1 class="text-2xl font-bold">Join Our Mission</h1>
+      <a href="home.html" class="text-sm hover:underline">← Back to Home</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="bg-white py-16">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-4xl font-bold text-[#004d40] mb-4">💖 Support Our Cause</h2>
+        <p class="text-lg mb-6">
+          Your generosity fuels our mission. Every donation helps us reach more lives and bring hope where it’s needed most.
+        </p>
+        <ul class="space-y-2 text-gray-700">
+          <li>✔️ Make a real impact in communities</li>
+          <li>✔️ Support programs that change lives</li>
+          <li>✔️ Join a network of compassionate givers</li>
+        </ul>
+      </div>
+      <img src="images/donate.png" alt="Volunteer" class="rounded shadow-md">
+    </div>
+  </section>
+
+
+
+
+ 
+
+  <!-- Page Content -->
+<div class="mt-32 px-4 md:px-8">
+  <div class="max-w-6xl mx-auto bg-green-900 rounded-lg shadow-lg p-6 md:p-12 grid md:grid-cols-2 gap-10 items-center">
+    
+    <!-- Left: Form -->
+    <div>
+      <h1 class="text-3xl font-bold mb-6 text-white">Support Our Mission</h1>
+
+      <form id="donationForm" class="space-y-4">
+        <input type="text" name="name" placeholder="Full Name" required class="w-full p-3 rounded text-black" />
+        <input type="email" name="email" placeholder="Email Address" required class="w-full p-3 rounded text-black" />
+        <input type="tel" name="phone" placeholder="Phone Number" required class="w-full p-3 rounded text-black" />
+        <input type="text" name="country" placeholder="Country" required class="w-full p-3 rounded text-black" />
+        <input type="number" name="amount" placeholder="Amount (₦, $, €)" required class="w-full p-3 rounded text-black" />
+        <select name="currency" required class="w-full p-3 rounded text-black">
+          <option value="">Select Currency</option>
+          <option value="NGN">₦ Naira</option>
+          <option value="USD">$ Dollar</option>
+          <option value="EUR">€ Euro</option>
+        </select>
+        <input type="hidden" name="payment_method" id="payment_method" />
+
+        <button type="submit" class="w-full bg-white text-black py-3 rounded hover:bg-gray-200 transition">
+          Continue
+        </button>
+      </form>
+
+      <!-- Loader -->
+      <div id="loader" class="hidden text-center mt-6">
+        <div class="animate-spin border-4 border-white border-t-transparent rounded-full w-8 h-8 mx-auto"></div>
+        <p class="mt-2">Processing...</p>
+      </div>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="hidden md:block">
+      <img src="images/logo.png" alt="Donation Image" class="rounded-lg w-full h-auto object-cover" />
+    </div>
+  </div>
+</div>
+
+  <!-- Payment Options Modal -->
+  <div id="paymentModal" class="fixed inset-0 bg-black bg-opacity-80 hidden z-50 flex items-center justify-center">
+    <div class="bg-white text-black rounded-lg p-6 w-80 space-y-4 text-center">
+      <h2 class="text-lg font-bold">Select Payment Gateway</h2>
+      <div class="grid gap-3">
+        <button onclick="setPaymentMethod('paystack')" class="bg-blue-600 text-white py-2 rounded">Pay with Paystack</button>
+        <button onclick="setPaymentMethod('flutterwave')" class="bg-yellow-500 text-black py-2 rounded">Pay with Flutterwave</button>
+        <button onclick="setPaymentMethod('paypal')" class="bg-gray-800 text-white py-2 rounded">PayPal</button>
+        <button onclick="setPaymentMethod('stripe')" class="bg-purple-700 text-white py-2 rounded">Stripe</button>
+      </div>
+      <button onclick="closeModal()" class="text-sm mt-4 text-blue-600">Cancel</button>
+    </div>
+  </div>
+
+
+
+  <!-- Footer -->
+<footer class="bg-[#004d40] text-white mt-10">
+  <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
+
+    <!-- Column 1: About -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4">About Us</h2>
+      <p class="text-sm text-gray-300">
+        We are committed to empowering lives through impactful programs. Join us in making a difference through your generous support.
+      </p>
+    </div>
+
+    <!-- Column 2: Quick Links -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4">Quick Links</h2>
+      <ul class="space-y-2 text-sm">
+        <li><a href="index.html" class="hover:text-gray-300">Home</a></li>
+        <li><a href="about.html" class="hover:text-gray-300">About</a></li>
+        <li><a href="donate.html" class="hover:text-gray-300">Donate</a></li>
+        <li><a href="contact.html" class="hover:text-gray-300">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Column 3: Newsletter -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4">Newsletter</h2>
+      <p class="text-sm text-gray-300 mb-2">Subscribe to get updates and news.</p>
+      <form>
+        <input type="email" placeholder="Your Email" class="w-full p-2 rounded text-black mb-2" required />
+        <button type="submit" class="w-full bg-white text-[#004d40] font-semibold p-2 rounded hover:bg-gray-200 transition">Subscribe</button>
+      </form>
+    </div>
+
+    <!-- Column 4: Map -->
+    <div>
+      <h2 class="text-lg font-semibold mb-4">Our Location</h2>
+      <div class="w-full h-40 rounded overflow-hidden">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3939.695131236144!2d7.494341114253917!3d9.057303091000572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x104e0a5c290c9c5b%3A0x3eeb39f30a32d391!2sAbuja%2C%20Nigeria!5e0!3m2!1sen!2sng!4v1700000000000"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom Strip -->
+  <div class="bg-[#00332d] text-center text-sm py-4 text-gray-400">
+    &copy; 2025 Empower Foundation. All rights reserved. Developed by 
+    <a href="https://hemitintellicore.com" target="_blank" class="text-white hover:underline">Hemit Intellicore Ltd.</a>
+  </div>
+</footer>
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+  <script>
+    // Toggle mobile menu
+    document.getElementById("navToggle").addEventListener("click", () => {
+      document.getElementById("mobileMenu").classList.toggle("hidden");
+    });
+  </script>
+
+  <script src="js/donate.js"></script>
+</body>
+</html>
