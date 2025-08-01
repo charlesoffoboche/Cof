@@ -13,6 +13,122 @@
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet"/>
   <link rel="stylesheet" href="css/contact.css" />
   
+<style>
+  :root {
+    --cof-orange: #e7700e;
+  }
+
+  /* Orange accent for section title */
+  .section-title {
+    color: var(--cof-orange) !important;
+  }
+
+  /* Orange glow on contact form card on hover */
+  .contact-card:hover {
+    box-shadow: 0 0 12px rgba(247, 148, 29, 0.3);
+    transition: box-shadow 0.3s ease;
+  }
+
+  /* Orange for icons in address area */
+  .contact-card i.text-danger {
+    color: var(--cof-orange) !important;
+  }
+
+  /* Button accent */
+  .btn-gold {
+    background-color: var(--cof-orange);
+    border: none;
+    color: #fff;
+  }
+
+  .btn-gold:hover {
+    background-color: #e7700e;
+    color: #fff;
+  }
+
+  /* Newsletter button */
+  .newsletter button {
+    background-color: var(--cof-orange);
+    color: #fff;
+    border: none;
+    padding: 0 15px;
+  }
+
+  .newsletter button:hover {
+    background-color: #e7700e;
+  }
+
+  /* Floating volunteer button override */
+  .fab-btn.bg-warning {
+    background-color: var(--cof-orange) !important;
+    border-color: var(--cof-orange) !important;
+  }
+
+  /* Footer link hover orange */
+  .footer-link:hover {
+    color: var(--cof-orange) !important;
+    text-decoration: underline;
+  }
+
+  /* Social icons hover orange */
+  .social-icon:hover {
+    color: var(--cof-orange) !important;
+  }
+
+  .nav-link {
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #e0b000 !important;
+}
+
+.dropdown-menu {
+  border-radius: 0.4rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+
+
+.donate-btn {
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0.6rem 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    text-decoration: none;
+  }
+
+  .donate-btn .icon-circle {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+  .donate-btn:hover {
+    color: #fd7e14;
+    border-color: #fd7e14;
+    background-color: transparent;
+  }
+
+  .donate-btn:hover .icon-circle {
+    border-color: #fd7e14;
+    color: #fd7e14;
+  }
+
+</style>
 
   
 </head>
@@ -20,61 +136,65 @@
 <body>
 <!-- Floating Action Buttons -->
 <div class="floating-buttons">
-  <a href="donate.html" class="fab donate-btn" title="Donate">
-    <i class="fas fa-hand-holding-heart"></i> Donate
+  <a href="donate.html" class="fab-btn bg-danger" title="Donate">
+    <i class="fas fa-hand-holding-heart text-white"></i>
   </a>
-  <a href="volunteer.html" class="fab volunteer-btn" title="Volunteer">
-    <i class="fas fa-hands-helping"></i> Volunteer
+  <a href="volunteer.html" class="fab-btn bg-warning" title="Volunteer">
+    <i class="fas fa-hands-helping text-white"></i>
   </a>
 </div>
 
 
 
 
-  <!-- Navbar -->
-<nav class="navbar navbar-expand-lg shadow sticky-top navbar-custom">
-
-  <div class="container py-2">
-    <!-- Logo and Brand -->
-    <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold" href="home.html" style="font-family: 'Poppins', sans-serif; font-size: 1.6rem;">
-      <img src="images/logo.png" alt="Logo" width="40" height="40" style="border-radius: 50%;">
-      Charles Offoboche Foundation
+  <!-- Enhanced Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+  <div class="container">
+    <!-- Brand / Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/logo.png" alt="Logo" width="45" height="45" class="rounded-circle me-2">
+      <span class="fw-bold fs-5">COF Foundation</span>
     </a>
 
-    <!-- Toggler for mobile -->
-    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <!-- Mobile Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Navbar links -->
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav me-2">
+    <!-- Collapsible Menu -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link nav-hover text-white fw-semibold px-3" href="home.html">Home</a>
+          <a class="nav-link px-3 active" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-hover text-white fw-semibold px-3" href="about.html">About</a>
+          <a class="nav-link px-3" href="about.html">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-hover text-white fw-semibold px-3" href="gallery.html">Gallery</a>
+          <a class="nav-link px-3" href="gallery.html">Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-hover text-white fw-semibold px-3" href="contact.html">Contact</a>
+          <a class="nav-link px-3" href="contact.html">Contact</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white fw-semibold px-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+          <a class="nav-link dropdown-toggle px-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Explore
           </a>
-          <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="events.html">Events</a></li>
             <li><a class="dropdown-item" href="news.html">News</a></li>
             <li><a class="dropdown-item" href="team.html">Team</a></li>
           </ul>
         </li>
       </ul>
+      <a href="#" class="donate-btn">
+  Donate Now
+  <span class="icon-circle"><i class="fa fa-arrow-right"></i></span>
+</a>
     </div>
   </div>
 </nav>
+
 
   <section class="contact-section">
     <div class="container">

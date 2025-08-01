@@ -1,432 +1,111 @@
-/*==========================
-  Banner style
-==========================*/
-.banner-wrapper {
-  width: 100%;
-  background: linear-gradient(to right, #8b0000, #e60073); /* Ox-blood to Gold */
-  padding: 10px 0;
-  overflow: hidden;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
-  perspective: 800px;
-  z-index: 5;
-  position: relative;
-}
-
-.scrolling-banner-3d {
-  transform-style: preserve-3d;
-  animation: bannerTilt 10s ease-in-out infinite alternate;
-}
-
-.scrolling-text-3d {
-  display: inline-block;
-  white-space: nowrap;
-  font-size: 1rem;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-  animation: scroll3D 20s linear infinite;
-  transform: rotateY(5deg);
-}
-
-@keyframes scroll3D {
-  0% {
-    transform: translateX(100%) rotateY(5deg);
-  }
-  100% {
-    transform: translateX(-100%) rotateY(5deg);
-  }
-}
-
-@keyframes bannerTilt {
-  0% {
-    transform: rotateX(0deg);
-  }
-  100% {
-    transform: rotateX(5deg);
-  }
-}
-
-/* Icon animation (optional but stylish) */
-.scrolling-text-3d i {
-  animation: pulseIcon 1.5s infinite;
-  color: #ffd700;
-}
-
-@keyframes pulseIcon {
-  0%, 100% {
-    transform: scale(1);
-    opacity: 0.9;
-  }
-  50% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-}
-
-
-
-
-/*==========================
-  ROOT THEME VARIABLES
-==========================*/
-:root {
-  --primary-color: orange;
-  --secondary-color: black;
-  --accent-color: green;
-  --background-color: white;
-}
-
-/*==========================
-  BASE STYLES
-==========================*/
-body {
-  background-color: var(--background-color);
-  color: var(--secondary-color);
-  font-family: 'Poppins', sans-serif;
-}
-
-/*==========================
-  NAVBAR STYLES
-==========================*/
-.navbar {
-  font-family: 'Poppins', sans-serif;
-  backdrop-filter: blur(8px); /* glass-like effect */
-  z-index: 1000;
-}
-
-.navbar-brand img {
-  transition: transform 0.3s ease;
-  border-radius: 50%;
-}
-
-.navbar-brand:hover img {
-  transform: rotate(5deg) scale(1.1);
-}
-
-.navbar-custom {
-  background: linear-gradient(90deg, #004d40, #00796b);
-}
-
-.nav-link.nav-hover:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  transition: 0.3s ease;
-}
-
-.nav-hover {
+/*** Nav Bar ***/
+.nav-link {
   transition: all 0.3s ease;
 }
 
-.nav-hover:hover {
-  color: #ffeb3b !important;
-  transform: translateY(-1px);
+.nav-link:hover,
+.nav-link.active {
+  color: #e0b000 !important;
 }
 
-.dropdown-menu a:hover {
-  background-color: #e0f2f1;
-  color: #004d40;
+.dropdown-menu {
+  border-radius: 0.4rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/*==========================
-  HERO SECTION
-==========================*/
-.hero {
-  background: linear-gradient(to right, orange, green);
-  color: white;
-  padding: 80px 0;
-  text-align: center;
-}
 
-/*==========================
-  SECTION STYLING
-==========================*/
-.section {
-  padding: 60px 20px;
-  animation: fadeInUp 1s ease-in-out;
-}
+/*** Floating Button ***/
 
-.section h2 {
-  color: var(--primary-color);
-  margin-bottom: 20px;
-}
-
-/* Animation */
-@keyframes fadeInUp {
-  from {
-    transform: translateY(50px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-/*==========================
-  BUTTONS
-==========================*/
-.btn-custom {
-  border-radius: 30px;
-  padding: 10px 25px;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn-orange {
-  background-color: var(--primary-color);
-  color: white;
-  transition: background-color 0.3s ease;
-}
-
-.btn-orange:hover {
-  background-color: darkorange;
-}
-
-.btn-donate {
-  background-color: #006400;
-  color: white;
-}
-
-.btn-donate:hover {
-  background-color: #FFA500;
-}
-
-.btn-volunteer {
-  background-color: #FFA500;
-  color: white;
-}
-
-.btn-volunteer:hover {
-  background-color: #006400;
-}
-
-/*==========================
-  CUSTOM CARDS
-==========================*/
-.card-custom {
-  border: none;
-  border-radius: 15px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-}
-
-.card-custom:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 100, 0, 0.2);
-}
-
-.card-header {
-  background-color: var(--accent-color);
-  color: white;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-}
-
-/*==========================
-  IMAGE GRID
-==========================*/
-.image-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
-
-.image-grid img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
-}
-
-.image-grid img:hover {
-  transform: scale(1.05);
-}
-
-/*==========================
-  FLOATING BUTTONS
-==========================*/
 .floating-buttons {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 9999;
+  z-index: 1050;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
-.fab {
-  text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 14px;
-  color: #fff;
-  background-color: #333;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
+.fab-btn {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 8px;
-}
-
-.donate-btn {
-  background-color: #006400; 
-}
-
-.volunteer-btn {
-  background-color: #b8860b; /* Gold */
-}
-
-.fab:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
-}
-
-
-/*==========================
-  GRID LAYOUT UTILITY
-==========================*/
-.grid-layout {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 1.5rem;
-}
-
-/*==========================
-  WEB APP CARDS
-==========================*/
-.webapp-card {
-  background: #ffffff;
-  border-radius: 1rem;
-  padding: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.07);
-  transition: all 0.3s ease-in-out;
-}
-
-.webapp-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-}
-
-.webapp-card h5 {
-  font-weight: 600;
-  color: #D62828;
-  margin-bottom: 0.75rem;
-}
-
-.webapp-card p {
-  color: #444;
-  font-size: 0.95rem;
-}
-
-.webapp-engagement p {
-  max-width: 800px;
-  margin: 0 auto;
-  color: #333;
-}
-
-
-
-/* About Base Styles */
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  margin: 0;
-  padding: 0;
-  color: #333;
-}
-
-.container {
-  max-width: 1200px;
-  margin: auto;
-  padding: 2rem;
-}
-
-h1, h2, h3 {
-  color: #c0392b;
-}
-
-p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-}
-
-.section {
-  padding: 3rem 0;
-  background-color: #fff;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  box-shadow: 0 0 20px rgba(0,0,0,0.05);
-}
-
-/* Mission + Vision Cards */
-.card-group {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.card {
-  flex: 1 1 45%;
-  background-color: #fefefe;
-  padding: 2rem;
-  border-left: 6px solid #e67e22;
-  border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-/* Core Values Grid */
-.values-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
-}
-
-.value-card {
-  background: #fafafa;
-  padding: 1.5rem;
-  border-radius: 10px;
-  border-left: 4px solid #d35400;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-}
-
-.value-card h4 {
-  margin-bottom: 0.5rem;
-  color: #d35400;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .card-group {
-    flex-direction: column;
-  }
-}
-
-
-/*==========================
-  GALLERY SECTION
-==========================*/
-.gallery-grid .gallery-item {
-  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease;
+  text-decoration: none;
 }
 
-.gallery-grid .gallery-item:hover {
-  transform: scale(1.05);
+.fab-btn:hover {
+  transform: scale(1.1);
 }
 
-.modal-body .btn i {
-  margin-right: 5px;
+/***Donate Button ***/
+.donate-btn {
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0.6rem 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    text-decoration: none;
+  }
+
+  .donate-btn .icon-circle {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+  .donate-btn:hover {
+    color: #fd7e14;
+    border-color: #fd7e14;
+    background-color: transparent;
+  }
+
+  .donate-btn:hover .icon-circle {
+    border-color: #fd7e14;
+    color: #fd7e14;
+  }
+
+
+/*** Footer ***/
+.footer-link {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
+.footer-link:hover {
+  color: #04aa1a !important;
+  padding-left: 5px;
+  text-decoration: underline;
+}
 
+.social-icon {
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 16px;
+  transition: background-color 0.3s, transform 0.3s;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: #00cba9;
+  color: #04aa1a !important;
+  transform: scale(1.2);
+}

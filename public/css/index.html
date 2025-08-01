@@ -15,55 +15,57 @@
 
   
 </head>
-
+<!-- Banner Section -->
+<div class="banner-wrapper">
+  <div class="scrolling-banner-3d">
+    <div class="scrolling-text-3d">
+      <i class="fas fa-bullhorn"></i> &nbsp; Welcome to <strong>Charles Offoboche Foundation</strong> – Empowering Lives, Restoring Hope!
+    </div>
+  </div>
+</div>
 <body>
   <!-- Floating Action Buttons -->
-<div class="floating-buttons">
-  <a href="donate.html" class="fab donate-btn" title="Donate">
-    <i class="fas fa-hand-holding-heart"></i> Donate
-  </a>
-  <a href="volunteer.html" class="fab volunteer-btn" title="Volunteer">
-    <i class="fas fa-hands-helping"></i> Volunteer
-  </a>
-</div>
+  <div class="floating-buttons">
+    <a href="donate.html" class="fab"><i class="fas fa-hand-holding-heart me-2"></i>Donate</a>
+    <a href="volunteer.html" class="fab"><i class="fas fa-hands-helping me-2"></i>Volunteer</a>
+  </div>
 
 
 
-  <!-- Navbar -->
-<nav class="navbar navbar-expand-lg shadow sticky-top navbar-custom">
-
+  <!-- Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container py-2">
-    <!-- Logo and Brand -->
-    <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold" href="home.html" style="font-family: 'Poppins', sans-serif; font-size: 1.6rem;">
-      <img src="images/logo.png" alt="Logo" width="40" height="40" style="border-radius: 50%;">
-      Charles Offoboche Foundation
+    <!-- Logo and Brand Name (Left) -->
+    <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+      <img src="images/logo.png" alt="Logo" width="40" height="40" class="rounded-circle">
+      <span class="fw-bold">COF Foundation</span>
     </a>
 
-    <!-- Toggler for mobile -->
-    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <!-- Toggler (Right on Mobile) -->
+    <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Navbar links -->
+    <!-- Collapsible Content -->
     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav me-2">
+      <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link nav-hover text-white fw-semibold px-3" href="home.html">Home</a>
+          <a class="nav-link text-white" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-hover text-white fw-semibold px-3" href="about.html">About</a>
+          <a class="nav-link text-white" href="about.html">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-hover text-white fw-semibold px-3" href="gallery.html">Gallery</a>
+          <a class="nav-link text-white" href="gallery.html">Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-hover text-white fw-semibold px-3" href="contact.html">Contact</a>
+          <a class="nav-link text-white" href="contact.html">Contact</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white fw-semibold px-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="exploreDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Explore
           </a>
-          <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu" aria-labelledby="exploreDropdown">
             <li><a class="dropdown-item" href="events.html">Events</a></li>
             <li><a class="dropdown-item" href="news.html">News</a></li>
             <li><a class="dropdown-item" href="team.html">Team</a></li>
@@ -74,51 +76,16 @@
   </div>
 </nav>
 
-<!-- Banner Section -->
-<div class="banner-wrapper">
-  <div class="scrolling-banner-3d">
-    <div class="scrolling-text-3d">
-      <i class="fas fa-bullhorn"></i> &nbsp; Welcome to <strong>Charles Offoboche Foundation</strong> – Empowering Lives, Restoring Hope!
-    </div>
-  </div>
-</div>
 
-
-
-  <!-- Hero Section -->
-  <section class="text-center p-5 bg-white">
-    <h1 class="display-4 fw-bold">Charles Offoboche Foundation</h1>
-    <p class="lead">Empowering Lives | Driving Change | Building Futures</p>
-    <div class="mt-4">
-      <a href="donate.html" class="btn btn-custom btn-donate me-3">Donate Now</a>
-      <a href="volunteer.html" class="btn btn-custom btn-volunteer">Become a Volunteer</a>
-    </div>
-  </section>
-
-<!-- Slider Section -->
-<section class="hero-slider">
-  <div class="slider">
-    <div class="slide active">
-      <div class="content">
-        <h2>Transforming Communities</h2>
-        <p>We create opportunities and empower lives every day.</p>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="content">
-        <h2>Join the Mission</h2>
-        <p>Be part of a team making lasting impact around the world.</p>
-      </div>
-    </div>
-    <div class="slide">
-      <div class="content">
-        <h2>Real Stories, Real Change</h2>
-        <p>See how your support is changing lives across nations.</p>
-      </div>
-    </div>
+<!-- Hero Section -->
+<section class="text-center p-5 bg-white">
+  <h1 class="display-4 fw-bold">Charles Offoboche Foundation</h1>
+  <p class="lead">Empowering Lives | Driving Change | Building Futures</p>
+  <div class="mt-4 d-flex justify-content-center flex-wrap gap-2">
+    <a href="donate.html" class="btn btn-3d">Donate Now</a>
+    <a href="volunteer.html" class="btn btn-3d">Become a Volunteer</a>
   </div>
 </section>
-
 
 
 

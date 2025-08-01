@@ -12,47 +12,50 @@
 </head>
 <body>
 
-  <!-- Navbar -->
-<nav class="navbar navbar-expand-lg shadow sticky-top navbar-custom">
-
-  <div class="container py-2">
-    <!-- Logo and Brand -->
-    <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold" href="home.html" style="font-family: 'Poppins', sans-serif; font-size: 1.6rem;">
-      <img src="images/logo.png" alt="Logo" width="40" height="40" style="border-radius: 50%;">
-      Charles Offoboche Foundation
+  <!-- Enhanced Bootstrap Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+  <div class="container">
+    <!-- Brand / Logo -->
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="images/logo.png" alt="Logo" width="45" height="45" class="rounded-circle me-2">
+      <span class="fw-bold fs-5">COF Foundation</span>
     </a>
 
-    <!-- Toggler for mobile -->
-    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+    <!-- Mobile Toggler -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <!-- Navbar links -->
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav me-2">
+    <!-- Collapsible Menu -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link nav-hover text-white fw-semibold px-3" href="home.html">Home</a>
+          <a class="nav-link px-3 active" href="index.html">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-hover text-white fw-semibold px-3" href="about.html">About</a>
+          <a class="nav-link px-3" href="about.html">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-hover text-white fw-semibold px-3" href="gallery.html">Gallery</a>
+          <a class="nav-link px-3" href="gallery.html">Gallery</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-hover text-white fw-semibold px-3" href="contact.html">Contact</a>
+          <a class="nav-link px-3" href="contact.html">Contact</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-white fw-semibold px-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown">
+          <a class="nav-link dropdown-toggle px-3" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Explore
           </a>
-          <ul class="dropdown-menu dropdown-menu-end shadow-sm" aria-labelledby="navbarDropdown">
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
             <li><a class="dropdown-item" href="events.html">Events</a></li>
             <li><a class="dropdown-item" href="news.html">News</a></li>
             <li><a class="dropdown-item" href="team.html">Team</a></li>
           </ul>
         </li>
       </ul>
+      <a href="donate.html" class="donate-btn">
+  Donate Now
+  <span class="icon-circle"><i class="fa fa-arrow-right"></i></span>
+</a>
     </div>
   </div>
 </nav>
@@ -148,7 +151,7 @@
           <a href="#" class="social-icon" style="color: #f0f0f0; font-size: 18px; transition: 0.3s;"><i class="fab fa-linkedin-in"></i></a>
         </div>
         <div style="font-size: 14px; color: #bbbbbb;">
-          <p><i class="fas fa-envelope me-2"></i> info@cofoundation.org</p>
+          <p><i class="fas fa-envelope me-2"></i> info@coffoundation.org</p>
           <p><i class="fas fa-envelope me-2"></i> charlesoffobochefoundation@gmail.com</p>
           <p><i class="fas fa-phone me-2"></i> +234 8176622791</p>
         </div>

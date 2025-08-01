@@ -20,6 +20,14 @@
   <script src="https://js.paystack.co/v1/inline.js"></script>
   <script src="https://checkout.flutterwave.com/v3.js"></script>
 </head>
+<style>
+  input:focus + label,
+  input:not(:placeholder-shown) + label {
+    top: 0 !important;
+    font-size: 0.75rem !important;
+    color: #eb710d !important;
+  }
+</style>
 <body class="bg-black text-white font-sans min-h-screen">
 
 
@@ -27,7 +35,7 @@
   <header class="bg-[#004d40] text-white p-6 shadow-md">
     <div class="max-w-6xl mx-auto flex justify-between items-center">
       <h1 class="text-2xl font-bold">Join Our Mission</h1>
-      <a href="home.html" class="text-sm hover:underline">← Back to Home</a>
+      <a href="index.html" class="text-sm hover:underline">← Back to Home</a>
     </div>
   </header>
 
@@ -56,44 +64,81 @@
 
   <!-- Page Content -->
 <div class="mt-32 px-4 md:px-8">
-  <div class="max-w-6xl mx-auto bg-green-900 rounded-lg shadow-lg p-6 md:p-12 grid md:grid-cols-2 gap-10 items-center">
-    
+  <div class="max-w-6xl mx-auto bg-[#00332d] rounded-xl shadow-xl p-8 md:p-12 grid md:grid-cols-2 gap-10 items-start">
+
     <!-- Left: Form -->
     <div>
       <h1 class="text-3xl font-bold mb-6 text-white">Support Our Mission</h1>
+      <p class="text-gray-300 mb-6">
+        Your donation will directly impact lives through education, healthcare, and development projects.
+      </p>
 
-      <form id="donationForm" class="space-y-4">
-        <input type="text" name="name" placeholder="Full Name" required class="w-full p-3 rounded text-black" />
-        <input type="email" name="email" placeholder="Email Address" required class="w-full p-3 rounded text-black" />
-        <input type="tel" name="phone" placeholder="Phone Number" required class="w-full p-3 rounded text-black" />
-        <input type="text" name="country" placeholder="Country" required class="w-full p-3 rounded text-black" />
-        <input type="number" name="amount" placeholder="Amount (₦, $, €)" required class="w-full p-3 rounded text-black" />
-        <select name="currency" required class="w-full p-3 rounded text-black">
-          <option value="">Select Currency</option>
-          <option value="NGN">₦ Naira</option>
-          <option value="USD">$ Dollar</option>
-          <option value="EUR">€ Euro</option>
-        </select>
-        <input type="hidden" name="payment_method" id="payment_method" />
+      <form id="donationForm" class="space-y-6">
+  <!-- Full Name -->
+  <div class="relative">
+    <input type="text" name="name" required placeholder="Full Name" class="peer w-full px-4 py-3 text-black rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none" />
+    <label class="absolute left-4 top-3 text-gray-500 text-sm peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-xs transition-all">Full Name</label>
+  </div>
 
-        <button type="submit" class="w-full bg-white text-black py-3 rounded hover:bg-gray-200 transition">
-          Continue
-        </button>
-      </form>
+  <!-- Email -->
+  <div class="relative">
+    <input type="email" name="email" required placeholder="Email Address" class="peer w-full px-4 py-3 text-black rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none" />
+    <label class="absolute left-4 top-3 text-gray-500 text-sm peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-xs transition-all">Email Address</label>
+  </div>
+
+  <!-- Phone -->
+  <div class="relative">
+    <input type="tel" name="phone" required placeholder="Phone Number" class="peer w-full px-4 py-3 text-black rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none" />
+    <label class="absolute left-4 top-3 text-gray-500 text-sm peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-xs transition-all">Phone Number</label>
+  </div>
+
+  <!-- Country -->
+  <div class="relative">
+    <input type="text" name="country" required placeholder="Country" class="peer w-full px-4 py-3 text-black rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none" />
+    <label class="absolute left-4 top-3 text-gray-500 text-sm peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-xs transition-all">Country</label>
+  </div>
+
+  <!-- Amount -->
+  <div class="relative">
+    <input type="number" name="amount" required placeholder="Amount" class="peer w-full px-4 py-3 text-black rounded-md focus:ring-2 focus:ring-orange-500 focus:outline-none" />
+    <label class="absolute left-4 top-3 text-gray-500 text-sm peer-placeholder-shown:top-3 peer-placeholder-shown:text-base peer-focus:top-0 peer-focus:text-xs transition-all">Amount (₦, $, €)</label>
+  </div>
+
+  <!-- Currency -->
+  <div>
+    <select name="currency" required class="w-full px-4 py-3 rounded-md text-black bg-white focus:ring-2 focus:ring-orange-500 focus:outline-none">
+      <option value="">Select Currency</option>
+      <option value="NGN">₦ Naira</option>
+      <option value="USD">$ Dollar</option>
+      <option value="EUR">€ Euro</option>
+    </select>
+  </div>
+
+  <!-- Hidden -->
+  <input type="hidden" name="payment_method" id="payment_method" />
+
+  <!-- Submit -->
+  <button type="submit" class="w-full bg-[#eb710d] hover:bg-orange-600 text-white font-semibold py-3 rounded-md transition-all duration-300 shadow-lg">
+    Continue to Donate
+  </button>
+</form>
+
 
       <!-- Loader -->
       <div id="loader" class="hidden text-center mt-6">
         <div class="animate-spin border-4 border-white border-t-transparent rounded-full w-8 h-8 mx-auto"></div>
-        <p class="mt-2">Processing...</p>
+        <p class="mt-2 text-gray-300">Processing...</p>
       </div>
     </div>
 
     <!-- Right: Image -->
     <div class="hidden md:block">
-      <img src="images/logo.png" alt="Donation Image" class="rounded-lg w-full h-auto object-cover" />
+      <img src="images/logo.png" alt="Donation Impact" class="rounded-lg w-full h-auto object-cover shadow-xl" />
     </div>
+
   </div>
 </div>
+
 
   <!-- Payment Options Modal -->
   <div id="paymentModal" class="fixed inset-0 bg-black bg-opacity-80 hidden z-50 flex items-center justify-center">
@@ -112,7 +157,7 @@
 
 
   <!-- Footer -->
-<footer class="bg-[#004d40] text-white mt-10">
+<footer class="bg-[#eb710d] text-white mt-10">
   <div class="max-w-7xl mx-auto px-4 py-12 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-10">
 
     <!-- Column 1: About -->
@@ -159,7 +204,7 @@
 
   <!-- Bottom Strip -->
   <div class="bg-[#00332d] text-center text-sm py-4 text-gray-400">
-    &copy; 2025 Empower Foundation. All rights reserved. Developed by 
+    &copy; Charles Offoboche Foundation. All rights reserved. Developed by 
     <a href="https://hemitintellicore.com" target="_blank" class="text-white hover:underline">Hemit Intellicore Ltd.</a>
   </div>
 </footer>

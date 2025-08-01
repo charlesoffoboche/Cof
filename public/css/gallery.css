@@ -22,7 +22,7 @@ body {
 
     .filter-bar button {
       padding: 0.6rem 1.2rem;
-      background: #e69d00;
+      background: #fa8313;
       color: #fff;
       border: none;
       border-radius: 8px;
@@ -32,7 +32,7 @@ body {
 
     .filter-bar button:hover,
     .filter-bar button.active {
-      background: #b30059;
+      background: #000000;
     }
 
     .gallery-grid {
@@ -124,6 +124,43 @@ body {
 
 
 
+/***Donate Button ***/
+.donate-btn {
+    color: #fff;
+    border: 2px solid #fff;
+    padding: 0.6rem 1.2rem;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+    text-decoration: none;
+  }
+
+  .donate-btn .icon-circle {
+    background-color: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+    margin-left: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+  }
+
+  .donate-btn:hover {
+    color: #fd7e14;
+    border-color: #fd7e14;
+    background-color: transparent;
+  }
+
+  .donate-btn:hover .icon-circle {
+    border-color: #fd7e14;
+    color: #fd7e14;
+  }
 
 
 /*==========================
@@ -157,97 +194,29 @@ body {
   transform: scale(1.2);
 }
 
-/*==========================
-  NAVBAR STYLES
-==========================*/
-.navbar {
-  font-family: 'Poppins', sans-serif;
-  backdrop-filter: blur(8px); /* glass-like effect */
-  z-index: 1000;
-}
-
-.navbar-brand img {
-  transition: transform 0.3s ease;
-  border-radius: 50%;
-}
-
-.navbar-brand:hover img {
-  transform: rotate(5deg) scale(1.1);
-}
-
-.navbar-custom {
-  background: linear-gradient(90deg, #004d40, #00796b);
-}
-
-.nav-link.nav-hover:hover {
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 8px;
-  transition: 0.3s ease;
-}
-
-.nav-hover {
-  transition: all 0.3s ease;
-}
-
-.nav-hover:hover {
-  color: #ffeb3b !important;
-  transform: translateY(-1px);
-}
-
-.dropdown-menu a:hover {
-  background-color: #e0f2f1;
-  color: #004d40;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .floating-buttons {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  z-index: 9999;
+  z-index: 1050;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
 }
 
-.fab {
-  text-decoration: none;
-  padding: 12px 20px;
-  border-radius: 50px;
-  font-weight: bold;
-  font-size: 14px;
-  color: #fff;
-  background-color: #333;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: all 0.3s ease;
+.fab-btn {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 8px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+  text-decoration: none;
 }
 
-.donate-btn {
-  background-color: #006400; 
-}
-
-.volunteer-btn {
-  background-color: #b8860b; /* Gold */
-}
-
-.fab:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+.fab-btn:hover {
+  transform: scale(1.1);
 }
