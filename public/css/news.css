@@ -133,3 +133,67 @@
     border-color: #fd7e14;
     color: #fd7e14;
   }
+
+
+  /*** Nav Bar ***/
+.navbar.bg-dark {
+    background: linear-gradient(90deg, #004d40, #004d40) !important; /* Bootstrap blue to cyan gradient */
+  }
+
+  .navbar .nav-link,
+  .navbar .navbar-brand span {
+    color: #f8f9fa !important; /* Light text */
+  }
+
+  .navbar .nav-link:hover,
+  .navbar .navbar-brand:hover {
+    color: #d85011 !important;
+    text-shadow: 0 0 5px rgba(255,255,255,0.6);
+  }
+
+  .navbar .dropdown-menu {
+    background-color: #f8f9fa;
+  }
+
+  .navbar .dropdown-item {
+    color: #212529;
+  }
+
+  .navbar .dropdown-item:hover {
+    background-color: #e2e6ea;
+    color: #0d6efd;
+  }
+
+  .donate-btn {
+    background-color: #107003;
+    color: #fff !important;
+    padding: 8px 16px;
+    border-radius: 30px;
+    margin-left: 15px;
+    transition: 0.3s ease-in-out;
+    display: inline-flex;
+    align-items: center;
+    font-weight: 500;
+  }
+
+  .donate-btn:hover {
+    background-color: #0bbbe6;
+    color: #fff !important;
+    text-decoration: none;
+  }
+
+  .icon-circle {
+    background-color: #fff;
+    color: #0dcaf0;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 8px;
+  }
+
+  .icon-circle i {
+    font-size: 12px;
+  }

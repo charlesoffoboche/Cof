@@ -81,3 +81,37 @@
     
 })(jQuery);
 
+
+/* weather App*/
+var footerInput = document.querySelector('#footer-cityinput');
+var footerBtn = document.querySelector('#footer-add');
+var footerCity = document.querySelector('#footer-cityoutput');
+var footerDesc = document.querySelector('#footer-description');
+var footerTemp = document.querySelector('#footer-temp');
+var footerWind = document.querySelector('#footer-wind');
+var footerIcon = document.querySelector('#footer-icon');
+var footerCard = document.querySelector('#footer-weather-card');
+
+var apik = "9c5735abae23c748365a15e5673cab23";
+
+function convertion(val){
+    return (val - 273).toFixed(2);
+}
+
+footerBtn.addEventListener('click', function(){
+    fetch('https://api.openweathermap.org/data/2.5/weather?q='+footerInput.value+'&appid='+apik)
+    .then(res => res.json())
+    .then(data => {
+        footerCity.textContent = `${data.name}`;
+        footerDesc.textContent = `Condition: ${data.weather[0].description}`;
+        footerTemp.textContent = `Temperature: ${convertion(data.main.temp)} °C`;
+        footerWind.textContent = `Wind Speed: ${data.wind.speed} km/h`;
+        footerIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+
+        
+        footerCard.style.display = 'block'; // Show the card
+    })
+    .catch(err => alert('You entered an invalid city name'));
+});
+
+

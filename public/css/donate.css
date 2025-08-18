@@ -82,3 +82,20 @@ input, select, textarea {
 .payment-method:hover {
   background: #eaeaea;
 }
+
+
+#paypalCustomBtn {
+  background-color: #222;
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#paypalCustomBtn:hover {
+  background-color: #444;
+}
